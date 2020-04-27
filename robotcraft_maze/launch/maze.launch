@@ -1,0 +1,6 @@
+<launch>
+
+	<include file="$(find robotcraft_maze)/launch/autonomous.launch" />
+	<include file="$(find robotcraft_maze)/launch/gmapping.launch" />
+
+</launch>

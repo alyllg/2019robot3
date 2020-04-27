@@ -1,0 +1,8 @@
+<launch>
+
+	<node pkg="stage_ros" type="stageros"   name="stageros" args="$(find robotcraft_maze)/worlds/maze.world"/>
+	<node pkg="robotcraft_maze" type="maze_driver"  name="maze_driver" output="screen"/>
+	<!-- <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop" output="screen"/> -->
+	<node pkg="robotcraft_maze" type="maze_basic_task"  name="maze_basic_task" output="screen"/>
+
+</launch>

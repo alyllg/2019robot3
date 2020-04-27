@@ -1,0 +1,34 @@
+define floorplan model (
+    color "gray"
+    boundary 0
+    gui_nose 1
+    gui_grid 0
+    gui_move 0
+    gui_outline 0
+    gripper_return 0
+    fiducial_return 0
+)
+
+
+window( 
+  size [ 550 550 1]         
+  rotate [ 0 0]    
+  center [ 2.7 2.7 0 ]       
+  scale 85                 # zoom
+  show_data 1
+  show_clock 1
+)
+
+
+floorplan (
+  size [5.400 5.400 1.000]
+  pose [2.700 2.700 0.000 0.000]
+  bitmap "../maps/maze.png"
+)
+
+
+include "../robots/robotcraft2019_robot.inc"
+robotcraft2019_robot(pose [ 0.05  4.95  0.000  0.000 ] name "robotcraft_robot_group7")
+
+#  include "robotcraft2018_robot.inc"
+#  robotcraft2018_robot(pose [ 0.05  4.95  0.000  0.000 ] name "robotcraft_robot_groupX")
